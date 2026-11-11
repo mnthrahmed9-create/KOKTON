@@ -1,0 +1,492 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#09244b">
+<meta name="description" content="KOKTON شركة متعددة المجالات، برؤية مستقبلية في التكنولوجيا والابتكار والمشاريع الرقمية.">
+<title>KOKTON | شركة كوكـتون</title>
+
+<style>
+:root{
+  --navy:#09244b;
+  --blue:#1769d2;
+  --light:#eaf3ff;
+  --white:#fff;
+  --text:#173457;
+  --muted:#71839b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:Tahoma,Arial,sans-serif;
+  background:#f5f9ff;
+  color:var(--text);
+  line-height:1.8;
+}
+a{text-decoration:none;color:inherit}
+button{font:inherit;cursor:pointer}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.94);
+  backdrop-filter:blur(15px);
+  box-shadow:0 3px 20px #09244b0b;
+}
+.nav{
+  max-width:1200px;
+  margin:auto;
+  padding:13px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.logo{
+  font-size:27px;
+  font-weight:900;
+  color:var(--navy);
+  letter-spacing:2px;
+}
+.logo span{color:var(--blue)}
+.nav-links{
+  display:flex;
+  gap:25px;
+  align-items:center;
+}
+.nav-links a{
+  font-size:13px;
+  font-weight:bold;
+  color:#526781;
+  transition:.3s;
+}
+.nav-links a:hover{color:var(--blue)}
+.menu-btn{
+  display:none;
+  border:0;
+  background:var(--light);
+  color:var(--navy);
+  border-radius:10px;
+  padding:7px 13px;
+  font-size:22px;
+}
+.hero{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(135deg,#071a35,#103e79 65%,#1769d2);
+  color:white;
+  min-height:570px;
+  display:flex;
+  align-items:center;
+}
+.hero:before,.hero:after{
+  content:"";
+  position:absolute;
+  border-radius:50%;
+  border:1px solid #ffffff18;
+}
+.hero:before{
+  width:450px;height:450px;
+  top:-180px;left:-100px;
+  box-shadow:0 0 0 45px #ffffff08,
+             0 0 0 90px #ffffff05;
+}
+.hero:after{
+  width:230px;height:230px;
+  bottom:-140px;right:10%;
+  background:#ffffff08;
+}
+.hero-inner{
+  max-width:1200px;
+  width:100%;
+  margin:auto;
+  padding:85px 25px;
+  position:relative;
+  z-index:2;
+}
+.hero-label{
+  display:inline-block;
+  padding:7px 16px;
+  border:1px solid #ffffff50;
+  border-radius:30px;
+  color:#d9eaff;
+  font-size:12px;
+  margin-bottom:25px;
+}
+.hero h1{
+  font-size:clamp(38px,7vw,76px);
+  line-height:1.3;
+  font-weight:900;
+  max-width:750px;
+}
+.hero h1 span{color:#8ec4ff}
+.hero p{
+  color:#d1e1f5;
+  max-width:580px;
+  margin:20px 0 30px;
+  font-size:16px;
+}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{
+  padding:12px 26px;
+  border-radius:12px;
+  font-weight:bold;
+  display:inline-block;
+  transition:.3s;
+}
+.btn-primary{
+  background:white;color:var(--navy);
+}
+.btn-outline{
+  border:1px solid #ffffff70;color:white;
+}
+.btn:hover{transform:translateY(-4px)}
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:85px 23px;
+}
+.section-heading{text-align:center;margin-bottom:45px}
+.section-heading small{
+  color:var(--blue);
+  font-weight:bold;
+}
+.section-heading h2{
+  color:var(--navy);
+  font-size:32px;
+  margin:8px 0;
+}
+.section-heading p{
+  color:var(--muted);
+  font-size:14px;
+}
+.about-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+  align-items:center;
+}
+.about-box{
+  background:white;
+  padding:35px;
+  border-radius:22px;
+  box-shadow:0 12px 40px #163c6d0b;
+}
+.about-box h3{color:var(--navy);font-size:24px;margin-bottom:15px}
+.about-box p{color:var(--muted);font-size:14px}
+.about-visual{
+  min-height:300px;
+  border-radius:25px;
+  background:linear-gradient(145deg,#dcecff,#b4d5ff);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+.about-visual .big-logo{
+  font-size:65px;
+  font-weight:900;
+  color:#1255a2;
+  text-shadow:5px 8px 15px #22528a30;
+}
+.about-visual:before{
+  content:"";
+  position:absolute;
+  width:250px;height:250px;
+  border:2px solid #ffffff90;
+  border-radius:50%;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.card{
+  background:white;
+  border:1px solid #e5eef9;
+  border-radius:20px;
+  padding:28px 23px;
+  transition:.35s;
+  box-shadow:0 10px 30px #173d6d08;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 35px #1769d220;
+}
+.card-icon{
+  width:60px;height:60px;
+  border-radius:17px;
+  background:#eaf3ff;
+  display:grid;
+  place-items:center;
+  font-size:29px;
+  margin-bottom:20px;
+}
+.card h3{color:var(--navy);font-size:18px;margin-bottom:9px}
+.card p{font-size:13px;color:var(--muted)}
+.vision{
+  background:linear-gradient(120deg,#09244b,#1769d2);
+  color:white;
+  padding:65px 25px;
+  text-align:center;
+}
+.vision h2{font-size:30px;margin-bottom:15px}
+.vision p{
+  max-width:700px;
+  margin:auto;
+  color:#d5e7ff;
+  font-size:14px;
+}
+.projects{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.project{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid #e5eef9;
+}
+.project-top{
+  height:155px;
+  background:linear-gradient(140deg,#0c2d59,#3188ed);
+  display:grid;
+  place-items:center;
+  font-size:55px;
+}
+.project-info{padding:20px}
+.project-info h3{color:var(--navy);font-size:17px}
+.project-info p{font-size:13px;color:var(--muted)}
+.contact{
+  background:white;
+  border-radius:25px;
+  padding:35px;
+  text-align:center;
+  box-shadow:0 10px 35px #173d6d0b;
+}
+.contact h2{color:var(--navy);font-size:28px}
+.contact p{color:var(--muted);margin:10px 0 20px}
+.contact-note{
+  background:#edf5ff;
+  padding:13px;
+  border-radius:12px;
+  display:inline-block;
+  color:#24558b;
+  font-size:13px;
+}
+footer{
+  background:#071a35;
+  color:#d3e3f6;
+  padding:35px 20px;
+  text-align:center;
+}
+footer .logo{color:white;margin-bottom:8px}
+footer p{font-size:12px;color:#a9bfd9}
+footer small{display:block;margin-top:20px;color:#809ab9}
+
+@media(max-width:750px){
+  .menu-btn{display:block}
+  .nav-links{
+    display:none;
+    position:absolute;
+    top:65px;
+    right:12px;left:12px;
+    background:white;
+    border-radius:15px;
+    padding:20px;
+    box-shadow:0 12px 30px #09244b20;
+    flex-direction:column;
+    align-items:stretch;
+    gap:15px;
+  }
+  .nav-links.open{display:flex}
+  .nav-links a{padding:5px}
+  .hero{min-height:510px}
+  .hero-inner{padding:70px 23px}
+  .about-grid{grid-template-columns:1fr}
+  .grid,.projects{grid-template-columns:1fr 1fr}
+  .section{padding:60px 17px}
+}
+@media(max-width:440px){
+  .grid,.projects{grid-template-columns:1fr}
+  .hero h1{font-size:40px}
+  .section-heading h2{font-size:26px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <nav class="nav">
+    <a class="logo" href="#home">KOK<span>TON</span></a>
+    <button class="menu-btn" onclick="toggleMenu()" aria-label="القائمة">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#home" onclick="closeMenu()">الرئيسية</a>
+      <a href="#about" onclick="closeMenu()">من نحن</a>
+      <a href="#fields" onclick="closeMenu()">مجالاتنا</a>
+      <a href="#projects" onclick="closeMenu()">مشاريعنا</a>
+      <a href="#contact" onclick="closeMenu()">تواصل معنا</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <div class="hero-label">KOKTON COMPANY • عالم من الإمكانيات</div>
+    <h1>نصنع المستقبل،<br><span>ونفتح آفاقاً جديدة.</span></h1>
+    <p>
+      KOKTON علامة تجارية متعددة المجالات،
+      نسعى من خلالها إلى تطوير الأفكار وتحويلها
+      إلى مشاريع مبتكرة تواكب تطلعات المستقبل.
+    </p>
+    <div class="actions">
+      <a href="#about" class="btn btn-primary">اكتشف KOKTON</a>
+      <a href="#fields" class="btn btn-outline">مجالاتنا</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="section-heading">
+    <small>ABOUT KOKTON</small>
+    <h2>من نحن؟</h2>
+    <p>تعرف على رؤيتنا وهويتنا.</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-box">
+      <h3>مرحباً بك في KOKTON</h3>
+      <p>
+        KOKTON علامة تجارية تطمح إلى بناء حضور
+        متميز في مجالات متعددة. نؤمن بأن الأفكار
+        الكبيرة تبدأ بخطوات صغيرة، وأن الابتكار
+        هو الطريق نحو صناعة فرص جديدة.
+        نسعى إلى تقديم مشاريع ومنتجات تحمل
+        هوية واضحة وتجربة مميزة.
+      </p>
+    </div>
+    <div class="about-visual">
+      <div class="big-logo">KOKTON</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="fields">
+  <div class="section-heading">
+    <small>OUR FIELDS</small>
+    <h2>مجالات KOKTON</h2>
+    <p>مجالات متنوعة ضمن رؤية واحدة.</p>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <div class="card-icon">💻</div>
+      <h3>التكنولوجيا</h3>
+      <p>التوجه نحو الحلول التقنية والابتكارات الرقمية.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">📱</div>
+      <h3>التطبيقات</h3>
+      <p>تصميم وتطوير تجارب رقمية وتطبيقات ذكية.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎮</div>
+      <h3>الألعاب</h3>
+      <p>تطوير أفكار وتجارب ترفيهية وتعليمية.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🌐</div>
+      <h3>العالم الرقمي</h3>
+      <p>المواقع والمنصات والخدمات الإلكترونية.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🎨</div>
+      <h3>التصميم والإبداع</h3>
+      <p>الهوية البصرية والتصميم الإبداعي.</p>
+    </div>
+    <div class="card">
+      <div class="card-icon">🚀</div>
+      <h3>المشاريع المستقبلية</h3>
+      <p>استكشاف أفكار جديدة ومجالات قابلة للتطور.</p>
+    </div>
+  </div>
+</section>
+
+<section class="vision">
+  <h2>رؤيتنا نحو المستقبل</h2>
+  <p>
+    نطمح إلى أن تكون KOKTON علامة تجارية
+    ذات حضور واسع، تجمع بين الإبداع والتكنولوجيا
+    وتنوع المشاريع، وتعمل على تحويل الأفكار
+    إلى إنجازات حقيقية خطوة بخطوة.
+  </p>
+</section>
+
+<section class="section" id="projects">
+  <div class="section-heading">
+    <small>OUR PROJECTS</small>
+    <h2>مشاريعنا</h2>
+    <p>مساحة لعرض مشاريع KOKTON الحالية والمستقبلية.</p>
+  </div>
+  <div class="projects">
+    <div class="project">
+      <div class="project-top">🗺️</div>
+      <div class="project-info">
+        <h3>المشاريع التقنية</h3>
+        <p>مشاريع رقمية قيد التطوير.</p>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-top">♟️</div>
+      <div class="project-info">
+        <h3>الألعاب الرقمية</h3>
+        <p>أفكار وتجارب تفاعلية.</p>
+      </div>
+    </div>
+    <div class="project">
+      <div class="project-top">📲</div>
+      <div class="project-info">
+        <h3>التطبيقات الذكية</h3>
+        <p>تطبيقات ومنتجات رقمية.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="contact">
+    <h2>لنتواصل معاً</h2>
+    <p>
+      هل لديك فكرة أو مشروع ترغب بالتعاون بشأنه؟
+      يسعدنا التواصل معك.
+    </p>
+    <div class="contact-note">
+      سيتم إضافة وسائل التواصل الرسمية هنا.
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="logo">KOKTON</div>
+  <p>نصنع المستقبل، ونفتح آفاقاً جديدة.</p>
+  <small>© <span id="year"></span> KOKTON. جميع الحقوق محفوظة.</small>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("navLinks").classList.toggle("open");
+}
+function closeMenu(){
+  document.getElementById("navLinks").classList.remove("open");
+}
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+</script>
+
+</body>
+</html>
